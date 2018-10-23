@@ -7,7 +7,7 @@ import re
 import requests
 import time
 
-JINGLE_MASTER_FILEPATH = "dep/master-jingle-opening.mp3"
+JINGLE_MASTER_FILEPATH = "master-jingle-opening.mp3"
 JINGLE_LENGTH = 6.5
 
 def find_jingle_and_trim(filepath):
@@ -79,7 +79,7 @@ def overlay_trimmed_files():
         print('Overlaying ' + file_name)
         trimmed_file = AudioSegment.from_mp3('out/trimmed/' + file_name)
         combined_sound = combined_sound.overlay(trimmed_file)
-        combined_sound.export('out/high_quality_very_professional_sounding_jingle.mp3', format='mp3')
+    combined_sound.export('out/high_quality_very_professional_sounding_jingle.mp3', format='mp3')
 
 
 if __name__ == '__main__':
